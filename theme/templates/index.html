@@ -25,78 +25,24 @@
     </section>
     <section id="patrocinio">
         <h2>Patrocinadores</h2>   
-        {% for categorie, articles in categories %}
-            {% if categorie == 'diamante' %}
-            <article>
-                <h3>{{ categorie }}</h3>
-                <ul>
-                    {% for article in articles %}
-                        <li>{{ article.title }}</li>
-                    {% endfor %}
-                </ul>
-            </article>
-            {% endif %}
-        {% endfor %}
-        {% for categorie, articles in categories %}
-            {% if categorie == 'ouro' %}
-            <article>
-                <h3>{{ categorie }}</h3>
-                <ul>
-                    {% for article in articles %}
-                        <li>{{ article.title }}</li>
-                    {% endfor %}
-                </ul>
-            </article>
-            {% endif %}
-        {% endfor %}
-        {% for categorie, articles in categories %}
-            {% if categorie == 'prata' %}
-            <article>
-                <h3>{{ categorie }}</h3>
-                <ul>
-                    {% for article in articles %}
-                        <li>{{ article.title }}</li>
-                    {% endfor %}
-                </ul>
-            </article>
-            {% endif %}
-        {% endfor %}
-        {% for categorie, articles in categories %}
-            {% if categorie == 'bronze' %}
-            <article>
-                <h3>{{ categorie }}</h3>
-                <ul>
-                    {% for article in articles %}
-                        <li>{{ article.title }}</li>
-                    {% endfor %}
-                </ul>
-            </article>
-            {% endif %}
-        {% endfor %}
-        {% for categorie, articles in categories %}
-            {% if categorie == 'cobre' %}
-            <article>
-                <h3>{{ categorie }}</h3>
-                <ul>
-                    {% for article in articles %}
-                        <li>{{ article.title }}</li>
-                    {% endfor %}
-                </ul>
-            </article>
-            {% endif %}
-        {% endfor %}
-        {% for categorie, articles in categories %}
-            {% if categorie == 'apoios' %}
-            <article>
-                <h3>{{ categorie }}</h3>
-                <ul>
-                    {% for article in articles %}
-                        <li>{{ article.title }}</li>
-                    {% endfor %}
-                </ul>
-            </article>
-            {% endif %}
-        {% endfor %}
+        {% with filter="diamante" %}
+            {% include "components/patrocinio_template.html" %}
+        {% endwith %}
+        {% with filter="ouro" %}
+            {% include "components/patrocinio_template.html" %}
+        {% endwith %}
+        {% with filter="prata" %}
+            {% include "components/patrocinio_template.html" %}
+        {% endwith %}
+        {% with filter="bronze" %}
+            {% include "components/patrocinio_template.html" %}
+        {% endwith %}
+        {% with filter="cobre" %}
+            {% include "components/patrocinio_template.html" %}
+        {% endwith %}
+        {% with filter="apoios" %}
+            {% include "components/patrocinio_template.html" %}
+        {% endwith %}
     </section>
 </div>
 {% endblock %}

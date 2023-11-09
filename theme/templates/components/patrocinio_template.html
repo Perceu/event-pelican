@@ -1,0 +1,19 @@
+{% for categorie, articles in categories %}
+    {% if categorie == filter %}
+    <article>
+        <h3>{{ categorie }}</h3>
+        {% for article in articles %}
+            <div>
+                <div class="card-image">
+                    {% if article.image %}
+                    <img src="{{article.image}}" alt="icone do {{ article.title }}">
+                    {% else %}
+                    <img src="./theme/img/default_patrocinio.png" alt="icone do patrocinador">
+                    {% endif %}
+                </div>
+                {{ article.title }}
+            </div>
+        {% endfor %}
+    </article>
+    {% endif %}
+{% endfor %}
