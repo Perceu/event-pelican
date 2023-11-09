@@ -1,3 +1,44 @@
+.container {
+    width: 80%;
+    margin: auto
+}
+section {
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+}
+article {
+    ul {
+        padding: 0;
+        li {
+            list-style: none;
+        }
+    }
+}
+
+footer {
+    display: flex;
+    div {
+        display: flex;
+        flex-grow: 1;
+        p {
+            width: 100%;
+            text-align: center;
+        }
+    }
+}
+
+
 .menu {
     display: flex;
+}
+
+.faq {
+    dl {
+        text-align: left;
+    }
+    dd { 
+        display: block;
+        margin-left: 40px;
+    }
 }

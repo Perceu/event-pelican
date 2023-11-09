@@ -1,5 +1,11 @@
 <nav>
     <ul>
-        <li>Home</li>
+        {% for title, href in MENU %}
+            <li>
+                <a href="{{href}}">
+                    {{title}}
+                </a>
+            </li>
+        {% endfor %}
     </ul>
 </nav>

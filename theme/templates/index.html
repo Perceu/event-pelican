@@ -1,13 +1,102 @@
 {% extends "components/template.html" %}
 
 {% block body %}
-
-{% include './components/menu.html' %}
-
-{{ SITENAME }}
-<ul>
-    {% for categorie, articles in categories %}
-    <li>{{ categorie }}</li>
-    {% endfor %}
-</ul>
+<div class="container">
+    <section>
+        <h1>{{SITENAME}}</h1>
+    </section>
+    <section>
+        <h2>Sobre o Evento</h2>
+    </section>
+    <section id="faq">
+        <h2>FAQ</h2>
+        {% for categorie, articles in categories %}
+            {% if categorie == 'faq' %}
+            <article class="faq">
+                <dl>
+                    {% for article in articles %}
+                        <dt>{{ article.summary }}</dt>
+                        <dd>{{ article.content }}</dd>
+                    {% endfor %}
+                </dl>
+            </article>
+            {% endif %}
+        {% endfor %}
+    </section>
+    <section>
+        <h2>Patrocinadores</h2>   
+        {% for categorie, articles in categories %}
+            {% if categorie == 'diamante' %}
+            <article>
+                <h3>{{ categorie }}</h3>
+                <ul>
+                    {% for article in articles %}
+                        <li>{{ article.title }}</li>
+                    {% endfor %}
+                </ul>
+            </article>
+            {% endif %}
+        {% endfor %}
+        {% for categorie, articles in categories %}
+            {% if categorie == 'ouro' %}
+            <article>
+                <h3>{{ categorie }}</h3>
+                <ul>
+                    {% for article in articles %}
+                        <li>{{ article.title }}</li>
+                    {% endfor %}
+                </ul>
+            </article>
+            {% endif %}
+        {% endfor %}
+        {% for categorie, articles in categories %}
+            {% if categorie == 'prata' %}
+            <article>
+                <h3>{{ categorie }}</h3>
+                <ul>
+                    {% for article in articles %}
+                        <li>{{ article.title }}</li>
+                    {% endfor %}
+                </ul>
+            </article>
+            {% endif %}
+        {% endfor %}
+        {% for categorie, articles in categories %}
+            {% if categorie == 'bronze' %}
+            <article>
+                <h3>{{ categorie }}</h3>
+                <ul>
+                    {% for article in articles %}
+                        <li>{{ article.title }}</li>
+                    {% endfor %}
+                </ul>
+            </article>
+            {% endif %}
+        {% endfor %}
+        {% for categorie, articles in categories %}
+            {% if categorie == 'cobre' %}
+            <article>
+                <h3>{{ categorie }}</h3>
+                <ul>
+                    {% for article in articles %}
+                        <li>{{ article.title }}</li>
+                    {% endfor %}
+                </ul>
+            </article>
+            {% endif %}
+        {% endfor %}
+        {% for categorie, articles in categories %}
+            {% if categorie == 'apoios' %}
+            <article>
+                <h3>{{ categorie }}</h3>
+                <ul>
+                    {% for article in articles %}
+                        <li>{{ article.title }}</li>
+                    {% endfor %}
+                </ul>
+            </article>
+            {% endif %}
+        {% endfor %}
+    </section>
+</div>
 {% endblock %}

@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="/theme/css/index.css">
 </head>
 <body>
-    {% block body %}
-
-    {% endblock %}
+    {% include './components/menu.html' %}
+    {% block body %}{% endblock %}
+    {% include './components/footer.html' %}
 </body>
 </html>

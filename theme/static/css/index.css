@@ -1,1 +1,1 @@
-.menu{display:flex}html,body{margin:0;padding:0;border:0;font-family:sans-serif}
+.container{width:80%;margin:auto}section{height:100vh;width:100%;text-align:center}article ul{padding:0}article ul li{list-style:none}footer{display:flex}footer div{display:flex;flex-grow:1}footer div p{width:100%;text-align:center}.menu{display:flex}.faq dl{text-align:left}.faq dd{display:block;margin-left:40px}html,body{margin:0;padding:0;border:0;font-family:sans-serif}
