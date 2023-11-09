@@ -1,18 +1,13 @@
-<!DOCTYPE html>
-<html lang="{{DEFAULT_LANG}}">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{SITENAME}}</title>
-</head>
-<body>
-    {% include './components/menu.html' %}
-    {{ SITENAME }}
-    <ul>
-    {% for categorie, articles in categories %}
-        <li>{{ categorie }}</li>
-    {% endfor %}
-    </ul>
+{% extends "components/template.html" %}
 
-</body>
-</html>
+{% block body %}
+
+{% include './components/menu.html' %}
+
+{{ SITENAME }}
+<ul>
+    {% for categorie, articles in categories %}
+    <li>{{ categorie }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
