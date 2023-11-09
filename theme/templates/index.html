@@ -2,10 +2,10 @@
 
 {% block body %}
 <div class="container">
-    <section>
+    <section id="home">
         <h1>{{SITENAME}}</h1>
     </section>
-    <section>
+    <section id="sobre">
         <h2>Sobre o Evento</h2>
     </section>
     <section id="faq">
@@ -23,7 +23,7 @@
             {% endif %}
         {% endfor %}
     </section>
-    <section>
+    <section id="patrocinio">
         <h2>Patrocinadores</h2>   
         {% for categorie, articles in categories %}
             {% if categorie == 'diamante' %}

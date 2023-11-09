@@ -8,6 +8,7 @@ THEME = 'theme'
 USE_FOLDER_AS_CATEGORY=True
 MENU = [
     ('Home', '#home'),
+    ('Sobre', '#sobre'),
     ('Patrocinadores', '#patrocinio'),
     ('Faq', '#faq'),
     ('Site Map', '#sitemap')
